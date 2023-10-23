@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: yes
+
+  tasks:
+  - name: Setup RNCB HTTP proxy
+    lineinfile:
+      path: /etc/environment
+      line: http_proxy="http://usergate5.crimea.rncb.ru:8090"
+
+  - name: Setup RNCB HTTPS proxy  
+    lineinfile:
+      path: /etc/environment
+      line: https_proxy="http://usergate5.crimea.rncb.ru:8090"
