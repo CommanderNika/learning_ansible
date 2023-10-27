@@ -6,9 +6,9 @@
   - name: Setup Usergate HTTP proxy
     lineinfile:
       path: /etc/environment
-      line: http_proxy="http://usergate5.crimea.rncb.ru:8090"
+      line: http_proxy="{{ url }}"
 
   - name: Setup Usergate HTTPS proxy  
     lineinfile:
       path: /etc/environment
-      line: https_proxy="http://usergate5.crimea.rncb.ru:8090"
+      line: https_proxy="{{ url }}"
